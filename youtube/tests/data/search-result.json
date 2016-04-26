@@ -1,0 +1,40 @@
+{
+  "kind": "youtube#searchResult",
+  "etag": "Test etag",
+  "id": {
+    "kind": "song",
+    "videoId": "abc",
+    "channelId": "def",
+    "playlistId": "ghi"
+  },
+  "snippet": {
+    "publishedAt": "2/Apr/2016",
+    "channelId": "klm",
+    "title": "Test Title",
+    "description": "Test Description...",
+    "thumbnails": {
+      "default": {
+        "url": "http://example.com/test-url",
+        "width": "600",
+        "height": "400"
+      },
+      "medium": {
+        "url": "http://example.com/test-url",
+        "width": "600",
+        "height": "400"
+      },
+      "high": {
+        "url": "http://example.com/test-url",
+        "width": "600",
+        "height": "400"
+      },
+      "maxres": {
+        "url": "http://example.com/test-url",
+        "width": "600",
+        "height": "400"
+      }
+    },
+    "channelTitle": "Test Channel",
+    "liveBroadcastContent": "empty stream"
+  }
+}

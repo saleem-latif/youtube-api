@@ -1,0 +1,186 @@
+{
+ "kind": "youtube#playlistListResponse",
+ "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/wYxQ7JeTI1cJsJVQR2HaprHo85k\"",
+ "nextPageToken": "CAUQAA",
+ "pageInfo": {
+  "totalResults": 19,
+  "resultsPerPage": 5
+ },
+ "items": [
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/8yLhBmmKPc9--wDtG6OmMK7k3dI\"",
+   "id": "PL11NYOKsIj1Pt1RePKuay2IzdstUeVknx",
+   "snippet": {
+    "publishedAt": "2016-04-04T16:11:42.000Z",
+    "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
+    "title": "X-MEN: APOCALYPSE",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/KhIvSMeeh0A/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/KhIvSMeeh0A/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/KhIvSMeeh0A/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Marvel and DC United",
+    "localized": {
+     "title": "X-MEN: APOCALYPSE",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/6wC2bkwV8JDus5NQtjoy280lbdU\"",
+   "id": "PL11NYOKsIj1Nhinwb2fsHz-x7fHmyHa__",
+   "snippet": {
+    "publishedAt": "2016-03-26T10:01:16.000Z",
+    "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
+    "title": "SUICIDE SQUAD",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/brLiab5rdGA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/brLiab5rdGA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/brLiab5rdGA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Marvel and DC United",
+    "localized": {
+     "title": "SUICIDE SQUAD",
+     "description": ""
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/4_MWZfQMo9hzdWFzs-ITzCc3KNc\"",
+   "id": "PL11NYOKsIj1MNqgJUMo30-8UrEP1x5pQt",
+   "snippet": {
+    "publishedAt": "2016-03-21T14:30:22.000Z",
+    "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
+    "title": "CAPTAIN AMERICA: CIVIL WAR",
+    "description": "CAPTAIN AMERICA: CIVIL WAR",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/J2DUnqUhcDA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/J2DUnqUhcDA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/J2DUnqUhcDA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Marvel and DC United",
+    "localized": {
+     "title": "CAPTAIN AMERICA: CIVIL WAR",
+     "description": "CAPTAIN AMERICA: CIVIL WAR"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/Q3bU_Mm6Yet_2kZmEKsXReDL1nQ\"",
+   "id": "PL11NYOKsIj1O4CyYt0ED8hcq6_uvPTSqV",
+   "snippet": {
+    "publishedAt": "2016-01-10T12:41:11.000Z",
+    "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
+    "title": "BATMAN V SUPERMAN: DAWN OF JUSTICE",
+    "description": "BATMAN V SUPERMAN: DAWN OF JUSTICE",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/XFaKCAFyeqA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/XFaKCAFyeqA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/XFaKCAFyeqA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Marvel and DC United",
+    "localized": {
+     "title": "BATMAN V SUPERMAN: DAWN OF JUSTICE",
+     "description": "BATMAN V SUPERMAN: DAWN OF JUSTICE"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlist",
+   "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/Kbvwc7nO6zdcHzjN4bHCh1WCoK0\"",
+   "id": "PL11NYOKsIj1MagbGUIJCYFlf0QVMmsXEH",
+   "snippet": {
+    "publishedAt": "2016-01-07T13:45:41.000Z",
+    "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
+    "title": "MARVEL'S DAREDEVIL SEASON 2",
+    "description": "MARVEL'S DAREDEVIL SEASON 2",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/V5kdxKCRbZ8/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/V5kdxKCRbZ8/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/V5kdxKCRbZ8/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/V5kdxKCRbZ8/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/V5kdxKCRbZ8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Marvel and DC United",
+    "localized": {
+     "title": "MARVEL'S DAREDEVIL SEASON 2",
+     "description": "MARVEL'S DAREDEVIL SEASON 2"
+    }
+   }
+  }
+ ]
+}
