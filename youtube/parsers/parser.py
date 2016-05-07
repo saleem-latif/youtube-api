@@ -18,11 +18,14 @@ class BaseParser(object):
         :return:
         """
         self.result = result
-        self.data = JSONParser(result).parse()
 
     @property
     def raw(self):
         return self.data.id.kind
+
+    @property
+    def data(self):
+        return JSONParser(self.result).parse()
 
 
 class ThumbnailsParser(BaseParser):
