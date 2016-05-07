@@ -28,7 +28,3 @@ class Videos(APIBase):
     @property
     def cache_key(self):
         return hash(frozenset(self.params.items()))
-
-    def order_by(self, order):
-        self.params.update(order=order)
-        return self()

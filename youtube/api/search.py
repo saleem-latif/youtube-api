@@ -44,7 +44,3 @@ class Search(APIBase):
     def playlist(self):
         self.params.update(type='playlist')
         return self
-
-    def order_by(self, order):
-        self.params.update(order=order)
-        return self()
