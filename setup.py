@@ -70,7 +70,7 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
-        'google-api-python-client==1.4.2'
+        'google-api-python-client==1.4.2',
         'httplib2==0.9.2',
         'oauth2client==2.0.2',
         'pyasn1==0.1.9',
