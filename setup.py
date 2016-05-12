@@ -23,7 +23,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/saleem-latif/youtube-api',
+    url='https://github.com/saleem-latif/youtube-api-helpers',
 
     # Author details
     author='Saleem Latif',
@@ -72,7 +72,7 @@ setup(
     install_requires=[
         'google-api-python-client==1.4.2',
         'httplib2==0.9.2',
-        'oauth2client==2.0.2',
+        'oauth2client==1.5.1',
         'pyasn1==0.1.9',
         'pyasn1-modules==0.0.8',
         'rsa==3.4.2',
@@ -80,5 +80,6 @@ setup(
         'six==1.10.0',
         'uritemplate==0.6',
         'pytz==2015.7',
+        'Beaker==1.8.0',
     ],
 )

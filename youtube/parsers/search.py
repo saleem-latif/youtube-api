@@ -1,15 +1,17 @@
 """
-
+Youtube data Parsers for youtube data api for search results.
 """
 __author__ = 'Saleem Latif'
 
-from youtube.parsers.parser import BaseParser, ThumbnailsParser
+from youtube.parsers.parser import ResponseParser, ThumbnailsParser
 from youtube.decorators import default_on_error
 
 
-class SearchResponseParser(BaseParser):
+class SearchResponse(ResponseParser):
     """
-
+    Youtube data api gives the ability to search through youtube search/list api endpoint.
+    Result is paginated with Pagination info (such as total results, results per page, next page token etc.) included
+    in the response.
     """
     @property
     @default_on_error(KeyError, '')
@@ -44,10 +46,10 @@ class SearchResponseParser(BaseParser):
     @property
     def items(self):
         for item in self.result['items']:
-            yield SearchResultParser(item)
+            yield SearchResult(item)
 
 
-class SearchResultParser(BaseParser):
+class SearchResult(ResponseParser):
     """
     Parser for Youtube API's search result,
     more info about search api https://developers.google.com/youtube/v3/docs/search/list

@@ -1,13 +1,17 @@
 __author__ = 'Saleem Latif'
 
+from youtube.cache import get_cache
 from youtube.api.base import APIBase
 from youtube.api.contants import MAX_RESULT
-from youtube.parsers.search import SearchResponseParser
+from youtube.parsers.search import SearchResponse
+
+# Cache for api
+cache = get_cache()
 
 
 class Search(APIBase):
     """
-
+    This class is responsible for searching youtube content.
     """
     params = {
         "part": "id,snippet",
@@ -20,11 +24,12 @@ class Search(APIBase):
 
     def __call__(self, **kwargs):
         self.params.update(kwargs)
-        search_response = self.fetch()
-        return SearchResponseParser(search_response)
+        search_response = self.fetch(**self.params)
+        return SearchResponse(search_response)
 
-    def fetch(self):
-        return self.youtube.api.search().list(**self.params).execute()
+    @cache.region(region="search")
+    def fetch(self, **params):
+        return self.youtube.api.search().list(**params).execute()
 
     @property
     def cache_key(self):

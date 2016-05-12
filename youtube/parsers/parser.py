@@ -1,5 +1,5 @@
 """
-
+Parsers Base, common parser classes are defined here and used throughout rest of the parsers.
 """
 __author__ = 'Saleem Latif'
 
@@ -8,27 +8,23 @@ import json
 from youtube.decorators import default_on_error
 
 
-class BaseParser(object):
+class ResponseParser(object):
     """
-
+    Base Parser for Youtube data API response.
     """
     def __init__(self, result):
-        """
-
-        :return:
-        """
         self.result = result
 
     @property
     def raw(self):
-        return self.data.id.kind
+        return self.result
 
     @property
     def data(self):
         return JSONParser(self.result).parse()
 
 
-class ThumbnailsParser(BaseParser):
+class ThumbnailsParser(ResponseParser):
     """
     Youtube API parser for thumbnails.
     """

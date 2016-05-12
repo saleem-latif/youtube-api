@@ -1,11 +1,11 @@
 __author__ = 'Saleem Latif'
 
 
-class BaseModel(object):
+class Base(object):
     pass
 
 
-class Thumbnail(BaseModel):
+class Thumbnail(Base):
     default = ''
     medium = ''
     high = ''
@@ -20,7 +20,7 @@ class Thumbnail(BaseModel):
         self.maxres = maxres
 
 
-class Category(BaseModel):
+class Category(Base):
     category_id = ''
     title = ''
 

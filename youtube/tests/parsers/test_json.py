@@ -6,6 +6,7 @@ __author__ = 'Saleem Latif'
 
 import json
 from unittest import TestCase
+from os import path
 
 from youtube.parsers.parser import JSONParser
 from youtube.tests.data.search_result import data as utf_data
@@ -18,7 +19,7 @@ class TestJSONParser(TestCase):
 
     def setUp(self):
         super(TestJSONParser, self).setUp()
-        self.test_data_file_name = "../data/search-result.json"
+        self.test_data_file_name = path.dirname(path.dirname(__file__)) + "/data/search-result.json"
         self.test_data_str = open(self.test_data_file_name).read()
         self.test_data = json.loads(self.test_data_str)
 
@@ -41,11 +42,11 @@ class TestJSONParser(TestCase):
         self.assertEqual(data.snippet.description, self.test_data['snippet']['description'])
 
         self.assertEqual(data.snippet.thumbnails, self.test_data['snippet']['thumbnails'])
-        self.assertEqual(data.snippet.thumbnails.large, self.test_data['snippet']['thumbnails']['large'])
-        self.assertEqual(data.snippet.thumbnails.large.url, self.test_data['snippet']['thumbnails']['large']['url'])
-        self.assertEqual(data.snippet.thumbnails.large.width, self.test_data['snippet']['thumbnails']['large']['width'])
+        self.assertEqual(data.snippet.thumbnails.high, self.test_data['snippet']['thumbnails']['high'])
+        self.assertEqual(data.snippet.thumbnails.high.url, self.test_data['snippet']['thumbnails']['high']['url'])
+        self.assertEqual(data.snippet.thumbnails.high.width, self.test_data['snippet']['thumbnails']['high']['width'])
         self.assertEqual(
-            data.snippet.thumbnails.large.height, self.test_data['snippet']['thumbnails']['large']['height'],
+            data.snippet.thumbnails.high.height, self.test_data['snippet']['thumbnails']['high']['height'],
         )
 
         self.assertEqual(data.snippet.channelTitle, self.test_data['snippet']['channelTitle'])
@@ -70,11 +71,11 @@ class TestJSONParser(TestCase):
         self.assertEqual(data.snippet.description, self.test_data['snippet']['description'])
 
         self.assertEqual(data.snippet.thumbnails, self.test_data['snippet']['thumbnails'])
-        self.assertEqual(data.snippet.thumbnails.large, self.test_data['snippet']['thumbnails']['large'])
-        self.assertEqual(data.snippet.thumbnails.large.url, self.test_data['snippet']['thumbnails']['large']['url'])
-        self.assertEqual(data.snippet.thumbnails.large.width, self.test_data['snippet']['thumbnails']['large']['width'])
+        self.assertEqual(data.snippet.thumbnails.high, self.test_data['snippet']['thumbnails']['high'])
+        self.assertEqual(data.snippet.thumbnails.high.url, self.test_data['snippet']['thumbnails']['high']['url'])
+        self.assertEqual(data.snippet.thumbnails.high.width, self.test_data['snippet']['thumbnails']['high']['width'])
         self.assertEqual(
-            data.snippet.thumbnails.large.height, self.test_data['snippet']['thumbnails']['large']['height'],
+            data.snippet.thumbnails.high.height, self.test_data['snippet']['thumbnails']['high']['height'],
         )
 
         self.assertEqual(data.snippet.channelTitle, self.test_data['snippet']['channelTitle'])
@@ -99,11 +100,11 @@ class TestJSONParser(TestCase):
         self.assertEqual(data.snippet.description, self.test_data['snippet']['description'])
 
         self.assertEqual(data.snippet.thumbnails, self.test_data['snippet']['thumbnails'])
-        self.assertEqual(data.snippet.thumbnails.large, self.test_data['snippet']['thumbnails']['large'])
-        self.assertEqual(data.snippet.thumbnails.large.url, self.test_data['snippet']['thumbnails']['large']['url'])
-        self.assertEqual(data.snippet.thumbnails.large.width, self.test_data['snippet']['thumbnails']['large']['width'])
+        self.assertEqual(data.snippet.thumbnails.high, self.test_data['snippet']['thumbnails']['high'])
+        self.assertEqual(data.snippet.thumbnails.high.url, self.test_data['snippet']['thumbnails']['high']['url'])
+        self.assertEqual(data.snippet.thumbnails.high.width, self.test_data['snippet']['thumbnails']['high']['width'])
         self.assertEqual(
-            data.snippet.thumbnails.large.height, self.test_data['snippet']['thumbnails']['large']['height'],
+            data.snippet.thumbnails.high.height, self.test_data['snippet']['thumbnails']['high']['height'],
         )
 
         self.assertEqual(data.snippet.channelTitle, self.test_data['snippet']['channelTitle'])
@@ -128,11 +129,11 @@ class TestJSONParser(TestCase):
         self.assertEqual(data.snippet.description, utf_data['snippet']['description'])
 
         self.assertEqual(data.snippet.thumbnails, utf_data['snippet']['thumbnails'])
-        self.assertEqual(data.snippet.thumbnails.large, utf_data['snippet']['thumbnails']['large'])
-        self.assertEqual(data.snippet.thumbnails.large.url, utf_data['snippet']['thumbnails']['large']['url'])
-        self.assertEqual(data.snippet.thumbnails.large.width, utf_data['snippet']['thumbnails']['large']['width'])
+        self.assertEqual(data.snippet.thumbnails.high, utf_data['snippet']['thumbnails']['high'])
+        self.assertEqual(data.snippet.thumbnails.high.url, utf_data['snippet']['thumbnails']['high']['url'])
+        self.assertEqual(data.snippet.thumbnails.high.width, utf_data['snippet']['thumbnails']['high']['width'])
         self.assertEqual(
-            data.snippet.thumbnails.large.height, utf_data['snippet']['thumbnails']['large']['height'],
+            data.snippet.thumbnails.high.height, utf_data['snippet']['thumbnails']['high']['height'],
         )
 
         self.assertEqual(data.snippet.channelTitle, utf_data['snippet']['channelTitle'])

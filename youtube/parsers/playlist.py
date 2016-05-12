@@ -1,15 +1,17 @@
 """
-
+Youtube data Parsers for youtube data api for playlists.
 """
 __author__ = 'Saleem Latif'
 
-from youtube.parsers.parser import BaseParser, ThumbnailsParser
+from youtube.parsers.parser import ResponseParser, ThumbnailsParser
 from youtube.decorators import default_on_error
 
 
-class PlaylistListResponseParser(BaseParser):
+class PlaylistListResponse(ResponseParser):
     """
-
+    Youtube data api gives the ability to fetch youtube playlists with playlists/list api endpoint.
+    Result is paginated with Pagination info (such as total results, results per page, next page token etc.) included
+    in the response.
     """
     @property
     @default_on_error(KeyError, '')
@@ -44,10 +46,10 @@ class PlaylistListResponseParser(BaseParser):
     @property
     def items(self):
         for item in self.result['items']:
-            yield PlaylistItemParser(item)
+            yield Playlist(item)
 
 
-class PlaylistItemParser(BaseParser):
+class Playlist(ResponseParser):
     """
     Parser for Youtube API's search result,
     more info about videos api https://developers.google.com/youtube/v3/docs/playlists/list

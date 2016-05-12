@@ -11,7 +11,7 @@ from youtube.api.channels import Channels
 
 class Youtube(object):
     """
-
+    Main User accessible endpoint for youtube api helpers.
     """
     developer_key = None
     service_name = 'youtube'
