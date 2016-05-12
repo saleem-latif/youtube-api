@@ -1,15 +1,17 @@
 """
-
+Youtube data Parsers for youtube data api for videos.
 """
 __author__ = 'Saleem Latif'
 
-from youtube.parsers.parser import BaseParser, ThumbnailsParser
+from youtube.parsers.parser import ResponseParser, ThumbnailsParser
 from youtube.decorators import default_on_error
 
 
-class VideoListResponseParser(BaseParser):
+class VideoListResponse(ResponseParser):
     """
-
+    Youtube data api gives the ability to fetch youtube videos with videos/list api endpoint.
+    Result is paginated with Pagination info (such as total results, results per page, next page token etc.) included
+    in the response.
     """
     @property
     @default_on_error(KeyError, '')
@@ -47,7 +49,7 @@ class VideoListResponseParser(BaseParser):
             yield VideoListItemParser(item)
 
 
-class VideoListItemParser(BaseParser):
+class VideoListItemParser(ResponseParser):
     """
     Parser for Youtube API's search result,
     more info about videos api https://developers.google.com/youtube/v3/docs/videos/list

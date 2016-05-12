@@ -5,24 +5,27 @@ __author__ = 'Saleem Latif'
 
 import json
 from unittest import TestCase
+from os import path
 
-from youtube.parsers.search import SearchResultParser, SearchResponseParser
+from youtube.parsers.search import SearchResult, SearchResponse
 from youtube.parsers.constants import KIND_CHANNEL, KIND_PLAYLIST, KIND_VIDEO
 from youtube.tests.data.search_result import data as utf_data
 
 
 class TestSearchResultParser(TestCase):
     """
-    Tests for SearchResultParser.
+    Tests for SearchResult.
     """
 
     def setUp(self):
         super(TestSearchResultParser, self).setUp()
-        self.test_data_str = open("../data/search-result.json").read()
+        self.test_data_str = open(
+            path.dirname(path.dirname(__file__)) + "/data/search-result.json"
+        ).read()
         self.test_data = json.loads(self.test_data_str)
 
     def test_search(self):
-        data = SearchResultParser(self.test_data)
+        data = SearchResult(self.test_data)
 
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['id']['kind'])
@@ -43,7 +46,7 @@ class TestSearchResultParser(TestCase):
 
     def test_search_utf(self):
         self.test_data = utf_data
-        data = SearchResultParser(self.test_data)
+        data = SearchResult(self.test_data)
 
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['id']['kind'])
@@ -65,16 +68,18 @@ class TestSearchResultParser(TestCase):
 
 class TestSearchResponseParser(TestCase):
     """
-    Tests for SearchResponseParser.
+    Tests for SearchResponse.
     """
 
     def setUp(self):
         super(TestSearchResponseParser, self).setUp()
-        self.test_data_str = open("../data/search-results.json").read()
+        self.test_data_str = open(
+            path.dirname(path.dirname(__file__)) + "/data/search-results.json",
+        ).read()
         self.test_data = json.loads(self.test_data_str)
 
     def test_search(self):
-        data = SearchResponseParser(self.test_data)
+        data = SearchResponse(self.test_data)
 
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['kind'])

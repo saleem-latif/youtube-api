@@ -1,10 +1,10 @@
 __author__ = 'Saleem Latif'
 
-from youtube.models.base import BaseModel
+from youtube.models.base import Base
 from datetime import datetime
 
 
-class VideoModel(BaseModel):
+class VideoModel(Base):
     """
 
     """

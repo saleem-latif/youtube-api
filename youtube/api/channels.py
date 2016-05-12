@@ -1,13 +1,17 @@
 __author__ = 'Saleem Latif'
 
+from youtube.cache import get_cache
 from youtube.api.base import APIBase
 from youtube.api.contants import MAX_RESULT
-from youtube.parsers.channel import ChannelsResponseParser
+from youtube.parsers.channel import ChannelListResponse
+
+# Cache for api
+cache = get_cache()
 
 
 class Channels(APIBase):
     """
-
+    Channels is responsible for fetching youtube API channels
     """
     params = {
         "part": "id,snippet",
@@ -20,10 +24,11 @@ class Channels(APIBase):
 
     def __call__(self, **kwargs):
         self.params.update(kwargs)
-        return ChannelsResponseParser(self.fetch())
+        return ChannelListResponse(self.fetch(**self.params))
 
-    def fetch(self):
-        return self.youtube.api.channels().list(**self.params).execute()
+    @cache.region(region="channels")
+    def fetch(self, **params):
+        return self.youtube.api.channels().list(**params).execute()
 
     @property
     def cache_key(self):

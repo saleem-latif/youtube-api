@@ -1,15 +1,17 @@
 """
-
+Data Parsers for youtube data api for channels.
 """
 __author__ = 'Saleem Latif'
 
-from youtube.parsers.parser import BaseParser, ThumbnailsParser
+from youtube.parsers.parser import ResponseParser, ThumbnailsParser
 from youtube.decorators import default_on_error
 
 
-class ChannelsResponseParser(BaseParser):
+class ChannelListResponse(ResponseParser):
     """
-
+    Youtube data api gives the ability to fetch youtube channels with channels/list api endpoint.
+    Result is paginated with Pagination info (such as total results, results per page, next page token etc.) included
+    in the response.
     """
     @property
     @default_on_error(KeyError, '')
@@ -39,10 +41,10 @@ class ChannelsResponseParser(BaseParser):
     @property
     def items(self):
         for item in self.result['items']:
-            yield ChannelItemParser(item)
+            yield Channel(item)
 
 
-class ChannelItemParser(BaseParser):
+class Channel(ResponseParser):
     """
     Parser for Youtube API's search result,
     more info about videos api https://developers.google.com/youtube/v3/docs/playlists/list

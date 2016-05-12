@@ -1,9 +1,9 @@
 __author__ = 'Saleem Latif'
 
-from youtube.models.base import BaseModel
+from youtube.models.base import Base
 
 
-class SearchResultModel(BaseModel):
+class SearchResultModel(Base):
     """
 
     """

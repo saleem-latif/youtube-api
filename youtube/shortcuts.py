@@ -28,7 +28,7 @@ class YoutubeAPIShortcutsMixin(object):
         Args:
             video_ids (list): list of Youtube video ids.
         Returns:
-            video (youtube.parsers.videos.VideoListResponseParser): Fetched Video resource or None
+            video (youtube.parsers.videos.VideoListResponse): Fetched Video resource or None
         """
         result = self.videos(id=", ".join(video_ids))
         return result

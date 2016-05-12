@@ -5,8 +5,9 @@ __author__ = 'Saleem Latif'
 
 import json
 from unittest import TestCase
+from os import path
 
-from youtube.parsers.playlist import PlaylistItemParser, PlaylistListResponseParser
+from youtube.parsers.playlist import Playlist, PlaylistListResponse
 from youtube.tests.data.playlist_result import data as utf_data
 
 
@@ -17,11 +18,13 @@ class TestPlaylistItemParser(TestCase):
 
     def setUp(self):
         super(TestPlaylistItemParser, self).setUp()
-        self.test_data_str = open("../data/playlist-result.json").read()
+        self.test_data_str = open(
+            path.dirname(path.dirname(__file__)) + "/data/playlist-result.json"
+        ).read()
         self.test_data = json.loads(self.test_data_str)
 
     def test_videos(self):
-        data = PlaylistItemParser(self.test_data)
+        data = Playlist(self.test_data)
 
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['kind'])
@@ -40,7 +43,7 @@ class TestPlaylistItemParser(TestCase):
 
     def test_videos_utf(self):
         self.test_data = utf_data
-        data = PlaylistItemParser(self.test_data)
+        data = Playlist(self.test_data)
 
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['kind'])
@@ -61,16 +64,18 @@ class TestPlaylistItemParser(TestCase):
 
 class TestPlaylistResponseParser(TestCase):
     """
-    Tests for VideoListResponseParser.
+    Tests for VideoListResponse.
     """
 
     def setUp(self):
         super(TestPlaylistResponseParser, self).setUp()
-        self.test_data_str = open("../data/playlist-results.json").read()
+        self.test_data_str = open(
+            path.dirname(path.dirname(__file__)) + "/data/playlist-results.json",
+        ).read()
         self.test_data = json.loads(self.test_data_str)
 
     def test_videos(self):
-        data = PlaylistListResponseParser(self.test_data)
+        data = PlaylistListResponse(self.test_data)
 
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['kind'])

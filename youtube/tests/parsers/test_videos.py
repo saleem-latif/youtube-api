@@ -5,8 +5,9 @@ __author__ = 'Saleem Latif'
 
 import json
 from unittest import TestCase
+from os import path
 
-from youtube.parsers.videos import VideoListItemParser, VideoListResponseParser
+from youtube.parsers.videos import VideoListItemParser, VideoListResponse
 from youtube.tests.data.videos_result import data as utf_data
 
 
@@ -17,7 +18,9 @@ class TestVideoListItemParser(TestCase):
 
     def setUp(self):
         super(TestVideoListItemParser, self).setUp()
-        self.test_data_str = open("../data/video-result.json").read()
+        self.test_data_str = open(
+            path.dirname(path.dirname(__file__)) + "/data/video-result.json",
+        ).read()
         self.test_data = json.loads(self.test_data_str)
 
     def test_videos(self):
@@ -63,16 +66,18 @@ class TestVideoListItemParser(TestCase):
 
 class TestVideoListResponseParser(TestCase):
     """
-    Tests for VideoListResponseParser.
+    Tests for VideoListResponse.
     """
 
     def setUp(self):
         super(TestVideoListResponseParser, self).setUp()
-        self.test_data_str = open("../data/video-results.json").read()
+        self.test_data_str = open(
+            path.dirname(path.dirname(__file__)) + "/data/video-results.json",
+        ).read()
         self.test_data = json.loads(self.test_data_str)
 
     def test_videos(self):
-        data = VideoListResponseParser(self.test_data)
+        data = VideoListResponse(self.test_data)
 
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['kind'])
