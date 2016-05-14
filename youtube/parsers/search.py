@@ -45,8 +45,7 @@ class SearchResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield SearchResult(item)
+         return map(lambda item: SearchResult(item), self.result['items'])
 
 
 class SearchResult(ResponseParser):

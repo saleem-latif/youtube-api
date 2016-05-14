@@ -40,8 +40,7 @@ class ChannelListResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield Channel(item)
+        return map(lambda item: Channel(item), self.result['items'])
 
 
 class Channel(ResponseParser):

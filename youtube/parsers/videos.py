@@ -45,8 +45,7 @@ class VideoListResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield VideoListItemParser(item)
+        return map(lambda item: VideoListItemParser(item), self.result['items'])
 
 
 class VideoListItemParser(ResponseParser):

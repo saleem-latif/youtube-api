@@ -45,8 +45,7 @@ class PlaylistListResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield Playlist(item)
+        return map(lambda item: Playlist(item), self.result['items'])
 
 
 class Playlist(ResponseParser):
