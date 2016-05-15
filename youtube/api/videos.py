@@ -23,7 +23,7 @@ class Videos(APIBase):
         result = VideoListResponse(self.fetch(**self.params))
         return VideosResult.from_videos_result(result)
 
-    # @cache.region(region="videos")
+    @cache.region(region="videos")
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.videos().list(**params).execute()

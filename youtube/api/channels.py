@@ -23,7 +23,7 @@ class Channels(APIBase):
         result = ChannelListResponse(self.fetch(**self.params))
         return ChannelsResult.from_channels_result(result)
 
-    # @cache.region(region="channels")
+    @cache.region(region="channels")
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.channels().list(**params).execute()

@@ -23,7 +23,7 @@ class Playlists(APIBase):
         result = PlaylistListResponse(self.fetch(**self.params))
         return PlaylistsResult.from_playlists_result(result)
 
-    # @cache.region(region="playlists")
+    @cache.region(region="playlists")
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.playlists().list(**params).execute()
