@@ -5,7 +5,10 @@ __author__ = 'Saleem Latif'
 data = {
   "kind": "youtube#video",
   "etag": "Test etag",
-  "id": "22a2bxlvlKM",
+  "id": {
+    "kind": "youtube#video",
+    "videoId": "WSinMOs5eGw"
+  },
   "snippet": {
     "publishedAt": "2/Apr/2016",
     "channelId": "klm",

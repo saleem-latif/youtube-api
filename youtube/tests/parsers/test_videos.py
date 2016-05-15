@@ -29,7 +29,7 @@ class TestVideoListItemParser(TestCase):
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['kind'])
 
-        self.assertEqual(data.id, self.test_data['id'])
+        self.assertEqual(data.id, self.test_data['id']['videoId'])
         self.assertEqual(data.channel_id, self.test_data['snippet']['channelId'])
         self.assertEqual(data.channel_title, self.test_data['snippet']['channelTitle'])
         self.assertEqual(data.category_id, self.test_data['snippet']['categoryId'])
@@ -49,7 +49,7 @@ class TestVideoListItemParser(TestCase):
         self.assertEqual(data.etag, self.test_data['etag'])
         self.assertEqual(data.kind, self.test_data['kind'])
 
-        self.assertEqual(data.id, self.test_data['id'])
+        self.assertEqual(data.id, self.test_data['id']['videoId'])
         self.assertEqual(data.channel_id, self.test_data['snippet']['channelId'])
         self.assertEqual(data.channel_title, self.test_data['snippet']['channelTitle'])
         self.assertEqual(data.category_id, self.test_data['snippet']['categoryId'])
@@ -89,7 +89,7 @@ class TestVideoListResponseParser(TestCase):
         for index, item in enumerate(data.items):
             self.assertEqual(item.etag, self.test_data['items'][index]['etag'])
             self.assertEqual(item.kind, self.test_data['items'][index]['kind'])
-            self.assertEqual(item.id, self.test_data['items'][index]['id'])
+            self.assertEqual(item.id, self.test_data['items'][index]['id']['videoId'])
             self.assertEqual(item.title, self.test_data['items'][index]['snippet']['title'])
             self.assertEqual(item.published_at, self.test_data['items'][index]['snippet']['publishedAt'])
             self.assertEqual(item.description, self.test_data['items'][index]['snippet']['description'])

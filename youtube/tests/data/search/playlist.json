@@ -1,0 +1,177 @@
+{
+ "kind": "youtube#searchListResponse",
+ "etag": "\"zekp1FB4kTkkM-rWc1qIAAt-BWc/2cthv1ID7QDYoREd_w0uheUgddc\"",
+ "nextPageToken": "CAUQAA",
+ "regionCode": "DE",
+ "pageInfo": {
+  "totalResults": 1000000,
+  "resultsPerPage": 5
+ },
+ "items": [
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"zekp1FB4kTkkM-rWc1qIAAt-BWc/_SQ2xNAX0AJV_cdED0FzluZSMe0\"",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLZRRxQcaEjA4LVq375Kp2GzJlcwfpJogd"
+   },
+   "snippet": {
+    "publishedAt": "2015-02-26T23:28:11.000Z",
+    "channelId": "UC6nSFpj9HTCZ5t-N3Rm3-HA",
+    "title": "Art",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/VztSdwYPFCE/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/VztSdwYPFCE/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/VztSdwYPFCE/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Vsauce",
+    "liveBroadcastContent": "none"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"zekp1FB4kTkkM-rWc1qIAAt-BWc/QjE-FgSy0kLLkJGKu8LuENVVjPo\"",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLILc97vxK8uTQ9ixvt7XQE54TQ9Emo5dU"
+   },
+   "snippet": {
+    "publishedAt": "2016-05-10T06:04:22.000Z",
+    "channelId": "UCqE63mtd26F-Zt_cxWwRMaQ",
+    "title": "Popular Videos - Samsung Galaxy S7 & Consumer Electronics",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/q8Nq98RsbDw/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/q8Nq98RsbDw/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/q8Nq98RsbDw/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Samsung Galaxy S7 - Topic",
+    "liveBroadcastContent": "none"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"zekp1FB4kTkkM-rWc1qIAAt-BWc/D693CfqKFt6Wzqcud_wlQawLKho\"",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLl4T6p7km9dZxIQwk0vsbK3etWojd5gq4"
+   },
+   "snippet": {
+    "publishedAt": "2014-10-22T14:56:59.000Z",
+    "channelId": "UCTAgbu2l6_rBKdbTvEodEDw",
+    "title": "Nerdist Presents",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/heBMsH0NkXg/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/heBMsH0NkXg/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/heBMsH0NkXg/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Nerdist",
+    "liveBroadcastContent": "none"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"zekp1FB4kTkkM-rWc1qIAAt-BWc/jxpYQ6fEPL_-SsUjpUjOo8sqV1M\"",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLaN4T3KwTTKFTUsMIGddA95jHo_uAxf0B"
+   },
+   "snippet": {
+    "publishedAt": "2016-05-10T03:14:33.000Z",
+    "channelId": "UC5fUrak7AkwRWkpDPctkb1g",
+    "title": "Royalty free music for your videos/Music Royalty free para tus videos :)",
+    "description": "HQ music under the CC license.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Ojztox7Yhk0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Ojztox7Yhk0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Ojztox7Yhk0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Let'sDuddies",
+    "liveBroadcastContent": "none"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"zekp1FB4kTkkM-rWc1qIAAt-BWc/gaa2xSgkUs_6AnJQ7z6ttOTugcM\"",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLpGHT1n4-mAvI0p84-DJbiSfwdvUhNVpZ"
+   },
+   "snippet": {
+    "publishedAt": "2015-10-05T06:12:14.000Z",
+    "channelId": "UC-EnprmCZ3OXyAoG7vjVNCA",
+    "title": "School of Medicine",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/dk-vUbzRJkY/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/dk-vUbzRJkY/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/dk-vUbzRJkY/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Stanford",
+    "liveBroadcastContent": "none"
+   }
+  }
+ ]
+}

@@ -45,7 +45,7 @@ class SearchResponse(ResponseParser):
 
     @property
     def items(self):
-         return map(lambda item: SearchResult(item), self.result['items'])
+        return map(lambda item: SearchResult(item), self.result['items'])
 
 
 class SearchResult(ResponseParser):
@@ -71,7 +71,10 @@ class SearchResult(ResponseParser):
     @property
     @default_on_error(KeyError, '')
     def channel_id(self):
-        return self.result['id']['channelId']
+        try:
+            return self.result['id']['channelId']
+        except KeyError:
+            return self.result['snippet']['channelId']
 
     @property
     @default_on_error(KeyError, '')

@@ -19,6 +19,16 @@ class Thumbnail(Base):
         self.standard = standard
         self.maxres = maxres
 
+    @classmethod
+    def from_parser(cls, result):
+        return Thumbnail(
+            default=result.default,
+            medium=result.medium,
+            high=result.high,
+            standard=result.standard,
+            maxres=result.maxres,
+        )
+
 
 class Category(Base):
     category_id = ''

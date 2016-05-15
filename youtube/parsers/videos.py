@@ -66,7 +66,7 @@ class VideoListItemParser(ResponseParser):
     @property
     @default_on_error(KeyError, '')
     def id(self):
-        return self.result['id']
+        return self.result['id']['videoId']
 
     @property
     @default_on_error(KeyError, '')

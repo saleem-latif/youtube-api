@@ -3,6 +3,7 @@ __author__ = 'Saleem Latif'
 from youtube.cache import get_cache
 from youtube.api.base import APIBase
 from youtube.parsers.search import SearchResponse
+from youtube.models.search import SearchResult
 
 # Cache for api
 cache = get_cache()
@@ -19,8 +20,8 @@ class Search(APIBase):
 
     def __call__(self, **kwargs):
         self.params.update(kwargs)
-        search_response = self.fetch(**self.params)
-        return SearchResponse(search_response)
+        result = SearchResponse(self.fetch(**self.params))
+        return SearchResult.from_search_result(result)
 
     # @cache.region(region="search")
     def fetch(self, **params):

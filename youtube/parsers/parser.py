@@ -48,6 +48,11 @@ class ThumbnailsParser(ResponseParser):
     def maxres(self):
         return self.result['maxres']
 
+    @property
+    @default_on_error(KeyError, '')
+    def standard(self):
+        return self.result['standard']
+
 
 class JSONParser(object):
     """

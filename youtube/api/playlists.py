@@ -3,6 +3,7 @@ __author__ = 'Saleem Latif'
 from youtube.cache import get_cache
 from youtube.api.base import APIBase
 from youtube.parsers.playlist import PlaylistListResponse
+from youtube.models.playlist import PlaylistsResult
 
 # Cache for api
 cache = get_cache()
@@ -19,7 +20,8 @@ class Playlists(APIBase):
 
     def __call__(self, **kwargs):
         self.params.update(kwargs)
-        return PlaylistListResponse(self.fetch(**self.params))
+        result = PlaylistListResponse(self.fetch(**self.params))
+        return PlaylistsResult.from_playlists_result(result)
 
     # @cache.region(region="playlists")
     def fetch(self, **params):
