@@ -61,7 +61,7 @@ class Channel(ResponseParser):
     @property
     @default_on_error(KeyError, '')
     def id(self):
-        return self.result['id']['channelId']
+        return self.result['id']
 
     @property
     @default_on_error(KeyError, '')
@@ -84,6 +84,6 @@ class Channel(ResponseParser):
         return self.result['snippet']['customUrl']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser(result={}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])

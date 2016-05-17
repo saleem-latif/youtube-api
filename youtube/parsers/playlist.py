@@ -66,7 +66,7 @@ class Playlist(ResponseParser):
     @property
     @default_on_error(KeyError, '')
     def id(self):
-        return self.result['id']['playlistId']
+        return self.result['id']
 
     @property
     @default_on_error(KeyError, '')
@@ -94,6 +94,6 @@ class Playlist(ResponseParser):
         return self.result['snippet']['publishedAt']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser({}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])

@@ -19,7 +19,7 @@ class YoutubeAPIShortcutsMixin(object):
             video (youtube.parsers.videos.VideoListItemParser): Fetched Video resource or None
         """
         result = self.videos(id=video_id)
-        return result.items[0] if len(result.items) > 0 else None
+        return result.videos[0] if len(result.videos) > 0 else None
 
     def fetch_videos(self, video_ids):
         """
@@ -64,7 +64,10 @@ class YoutubeAPIShortcutsMixin(object):
                 "pageToken": page
             })
 
-        result = self.playlists(
+        result = self.search(
+            q='',
+            type='video',
+            order='viewCount',
             playlistId=playlist_id,
             **kwargs
         )

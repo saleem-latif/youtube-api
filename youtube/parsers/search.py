@@ -102,6 +102,6 @@ class SearchResult(ResponseParser):
         return self.result['snippet']['publishedAt']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser({}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])

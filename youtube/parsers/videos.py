@@ -66,7 +66,7 @@ class VideoListItemParser(ResponseParser):
     @property
     @default_on_error(KeyError, '')
     def id(self):
-        return self.result['id']['videoId']
+        return self.result['id']
 
     @property
     @default_on_error(KeyError, '')
@@ -99,6 +99,6 @@ class VideoListItemParser(ResponseParser):
         return self.result['snippet']['publishedAt']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser({}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])
