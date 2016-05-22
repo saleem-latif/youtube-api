@@ -1,7 +1,10 @@
 {
  "kind": "youtube#playlist",
  "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/8yLhBmmKPc9--wDtG6OmMK7k3dI\"",
- "id": "PL11NYOKsIj1Pt1RePKuay2IzdstUeVknx",
+  "id": {
+   "kind": "youtube#playlist",
+   "playlistId": "PLpGHT1n4-mAvI0p84-DJbiSfwdvUhNVpZ"
+  },
  "snippet": {
   "publishedAt": "2016-04-04T16:11:42.000Z",
   "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",

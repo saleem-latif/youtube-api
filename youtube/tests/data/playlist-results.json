@@ -10,7 +10,10 @@
   {
    "kind": "youtube#playlist",
    "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/8yLhBmmKPc9--wDtG6OmMK7k3dI\"",
-   "id": "PL11NYOKsIj1Pt1RePKuay2IzdstUeVknx",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLpGHT1n4-mAvI0p84-DJbiSfwdvUhNVpZ"
+   },
    "snippet": {
     "publishedAt": "2016-04-04T16:11:42.000Z",
     "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
@@ -43,7 +46,10 @@
   {
    "kind": "youtube#playlist",
    "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/6wC2bkwV8JDus5NQtjoy280lbdU\"",
-   "id": "PL11NYOKsIj1Nhinwb2fsHz-x7fHmyHa__",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLpGHT1n4-mAvI0p84-DJbiSfwdvUhNVpZ"
+   },
    "snippet": {
     "publishedAt": "2016-03-26T10:01:16.000Z",
     "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
@@ -76,7 +82,10 @@
   {
    "kind": "youtube#playlist",
    "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/4_MWZfQMo9hzdWFzs-ITzCc3KNc\"",
-   "id": "PL11NYOKsIj1MNqgJUMo30-8UrEP1x5pQt",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLpGHT1n4-mAvI0p84-DJbiSfwdvUhNVpZ"
+   },
    "snippet": {
     "publishedAt": "2016-03-21T14:30:22.000Z",
     "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
@@ -109,7 +118,10 @@
   {
    "kind": "youtube#playlist",
    "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/Q3bU_Mm6Yet_2kZmEKsXReDL1nQ\"",
-   "id": "PL11NYOKsIj1O4CyYt0ED8hcq6_uvPTSqV",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLpGHT1n4-mAvI0p84-DJbiSfwdvUhNVpZ"
+   },
    "snippet": {
     "publishedAt": "2016-01-10T12:41:11.000Z",
     "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",
@@ -142,7 +154,10 @@
   {
    "kind": "youtube#playlist",
    "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/Kbvwc7nO6zdcHzjN4bHCh1WCoK0\"",
-   "id": "PL11NYOKsIj1MagbGUIJCYFlf0QVMmsXEH",
+   "id": {
+    "kind": "youtube#playlist",
+    "playlistId": "PLpGHT1n4-mAvI0p84-DJbiSfwdvUhNVpZ"
+   },
    "snippet": {
     "publishedAt": "2016-01-07T13:45:41.000Z",
     "channelId": "UCs7KwEhH7dYnER1yXR7b4ZA",

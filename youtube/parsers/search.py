@@ -45,8 +45,7 @@ class SearchResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield SearchResult(item)
+        return map(lambda item: SearchResult(item), self.result['items'])
 
 
 class SearchResult(ResponseParser):
@@ -72,7 +71,10 @@ class SearchResult(ResponseParser):
     @property
     @default_on_error(KeyError, '')
     def channel_id(self):
-        return self.result['id']['channelId']
+        try:
+            return self.result['id']['channelId']
+        except KeyError:
+            return self.result['snippet']['channelId']
 
     @property
     @default_on_error(KeyError, '')
@@ -100,6 +102,6 @@ class SearchResult(ResponseParser):
         return self.result['snippet']['publishedAt']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser({}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])

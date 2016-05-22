@@ -45,8 +45,7 @@ class VideoListResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield VideoListItemParser(item)
+        return map(lambda item: VideoListItemParser(item), self.result['items'])
 
 
 class VideoListItemParser(ResponseParser):
@@ -100,6 +99,6 @@ class VideoListItemParser(ResponseParser):
         return self.result['snippet']['publishedAt']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser({}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])

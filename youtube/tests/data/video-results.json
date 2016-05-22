@@ -9,7 +9,10 @@
   {
    "kind": "youtube#video",
    "etag": "\"CuSCwMPVmgi8taDtE2LV6HdgkN0/8j-w4_UdZhSRH49pbz85FNLkIms\"",
-   "id": "22a2bxlvlKM",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "WSinMOs5eGw"
+   },
    "snippet": {
     "publishedAt": "2015-12-02T16:09:41.000Z",
     "channelId": "UCzIQGkxwZ0KVjYbnaGhZTCA",

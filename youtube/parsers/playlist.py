@@ -45,8 +45,7 @@ class PlaylistListResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield Playlist(item)
+        return map(lambda item: Playlist(item), self.result['items'])
 
 
 class Playlist(ResponseParser):
@@ -95,6 +94,6 @@ class Playlist(ResponseParser):
         return self.result['snippet']['publishedAt']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser({}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])

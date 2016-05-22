@@ -40,8 +40,7 @@ class ChannelListResponse(ResponseParser):
 
     @property
     def items(self):
-        for item in self.result['items']:
-            yield Channel(item)
+        return map(lambda item: Channel(item), self.result['items'])
 
 
 class Channel(ResponseParser):
@@ -85,6 +84,6 @@ class Channel(ResponseParser):
         return self.result['snippet']['customUrl']
 
     @property
-    @default_on_error(KeyError, '')
+    @default_on_error(KeyError, ThumbnailsParser(result={}))
     def thumbnails(self):
         return ThumbnailsParser(self.result['snippet']['thumbnails'])
