@@ -29,27 +29,27 @@ class ThumbnailsParser(ResponseParser):
     Youtube API parser for thumbnails.
     """
     @property
-    @default_on_error(KeyError, {})
+    @default_on_error((KeyError, TypeError), {})
     def default(self):
         return self.result['default']
 
     @property
-    @default_on_error(KeyError, {})
+    @default_on_error((KeyError, TypeError), {})
     def medium(self):
         return self.result['medium']
 
     @property
-    @default_on_error(KeyError, {})
+    @default_on_error((KeyError, TypeError), {})
     def high(self):
         return self.result['high']
 
     @property
-    @default_on_error(KeyError, {})
+    @default_on_error((KeyError, TypeError), {})
     def maxres(self):
         return self.result['maxres']
 
     @property
-    @default_on_error(KeyError, {})
+    @default_on_error((KeyError, TypeError), {})
     def standard(self):
         return self.result['standard']
 
