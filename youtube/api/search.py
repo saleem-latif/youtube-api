@@ -23,7 +23,7 @@ class Search(APIBase):
         result = SearchResponse(self.fetch(**self.params))
         return SearchResult.from_search_result(result)
 
-    @cache.region(region="search")
+    # @cache.region(region="search")
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.search().list(**params).execute()
