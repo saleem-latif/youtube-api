@@ -5,6 +5,9 @@ from youtube.api.base import APIBase
 from youtube.parsers.channel import ChannelListResponse
 from youtube.models.channel import ChannelsResult
 
+from youtube.decorators import default_on_error
+
+
 # Cache for api
 cache = get_cache()
 
@@ -24,6 +27,7 @@ class Channels(APIBase):
         return ChannelsResult.from_channels_result(result)
 
     @cache.region(region="channels")
+    @default_on_error((ValueError, UnicodeDecodeError), {})
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.channels().list(**params).execute()

@@ -44,6 +44,7 @@ class SearchResponse(ResponseParser):
         return self.result['pageInfo']['resultsPerPage']
 
     @property
+    @default_on_error((KeyError, TypeError), [])
     def items(self):
         return map(lambda item: SearchResult(item), self.result['items'])
 

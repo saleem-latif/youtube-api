@@ -5,6 +5,9 @@ from youtube.api.base import APIBase
 from youtube.parsers.playlist import PlaylistListResponse
 from youtube.models.playlist import PlaylistsResult
 
+from youtube.decorators import default_on_error
+
+
 # Cache for api
 cache = get_cache()
 
@@ -24,6 +27,7 @@ class Playlists(APIBase):
         return PlaylistsResult.from_playlists_result(result)
 
     @cache.region(region="playlists")
+    @default_on_error((ValueError, UnicodeDecodeError), {})
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.playlists().list(**params).execute()

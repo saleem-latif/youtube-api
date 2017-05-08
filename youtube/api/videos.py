@@ -5,6 +5,9 @@ from youtube.api.base import APIBase
 from youtube.parsers.videos import VideoListResponse
 from youtube.models.video import VideosResult
 
+from youtube.decorators import default_on_error
+
+
 # Cache for api
 cache = get_cache()
 
@@ -24,6 +27,7 @@ class Videos(APIBase):
         return VideosResult.from_videos_result(result)
 
     @cache.region(region="videos")
+    @default_on_error((ValueError, UnicodeDecodeError), {})
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.videos().list(**params).execute()
