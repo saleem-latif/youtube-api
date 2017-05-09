@@ -30,7 +30,6 @@ class Channels(APIBase):
         result = ChannelListResponse(self.fetch(**self.params))
         return ChannelsResult.from_channels_result(result)
 
-    @cache.region(region="channels")
     @default_on_error(
         (
             ValueError, UnicodeDecodeError, AttributeError, IncompleteRead,

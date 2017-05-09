@@ -4,16 +4,11 @@ from httplib import ResponseNotReady, IncompleteRead
 from httplib2 import FailedToDecompressContent
 from googleapiclient.errors import HttpError
 
-from youtube.cache import get_cache
 from youtube.api.base import APIBase
 from youtube.parsers.search import SearchResponse
 from youtube.models.search import SearchResult
 
 from youtube.decorators import default_on_error
-
-
-# Cache for api
-cache = get_cache()
 
 
 class Search(APIBase):
@@ -30,7 +25,6 @@ class Search(APIBase):
         result = SearchResponse(self.fetch(**self.params))
         return SearchResult.from_search_result(result)
 
-    @cache.region(region="search")
     @default_on_error(
         (
             ValueError, UnicodeDecodeError, AttributeError, IncompleteRead,
