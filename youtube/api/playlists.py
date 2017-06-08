@@ -1,14 +1,8 @@
 __author__ = 'Saleem Latif'
 
-from httplib import ResponseNotReady, IncompleteRead
-from httplib2 import FailedToDecompressContent
-from googleapiclient.errors import HttpError
-
 from youtube.api.base import APIBase
 from youtube.parsers.playlist import PlaylistListResponse
 from youtube.models.playlist import PlaylistsResult
-
-from youtube.decorators import default_on_error
 
 
 class Playlists(APIBase):
@@ -25,13 +19,6 @@ class Playlists(APIBase):
         result = PlaylistListResponse(self.fetch(**self.params))
         return PlaylistsResult.from_playlists_result(result)
 
-    @default_on_error(
-        (
-            ValueError, UnicodeDecodeError, AttributeError, IncompleteRead,
-            ResponseNotReady, HttpError, FailedToDecompressContent,
-        ),
-        {}
-    )
     def fetch(self, **params):
         self.reset_params()
         return self.youtube.api.playlists().list(**params).execute()
